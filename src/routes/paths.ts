@@ -1,0 +1,20 @@
+/** Rotas centralizadas — evita strings soltas nas telas e facilita a rastreabilidade (docs). */
+export const ROTAS = {
+  inicio: '/',
+  unidades: '/unidades',
+  cardapio: '/cardapio',
+  produto: (produtoId: number | string = ':produtoId') => `/cardapio/produto/${produtoId}`,
+  carrinho: '/carrinho',
+  login: '/login',
+  cadastro: '/cadastro',
+  fidelidade: '/fidelidade',
+  promocoes: '/promocoes',
+  checkout: '/checkout',
+  pagamento: (pedidoId: number | string = ':pedidoId') => `/pedidos/${pedidoId}/pagamento`,
+  confirmacao: (pedidoId: number | string = ':pedidoId') => `/pedidos/${pedidoId}/confirmacao`,
+  acompanhamento: (pedidoId: number | string = ':pedidoId') => `/pedidos/${pedidoId}`,
+  pedidos: '/pedidos',
+  privacidade: '/privacidade',
+  conta: '/conta',
+  painel: '/painel',
+} as const

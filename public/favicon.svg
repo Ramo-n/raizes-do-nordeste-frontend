@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Raízes do Nordeste">
+  <rect width="64" height="64" rx="14" fill="#7a2e0e"/>
+  <path d="M32 10c-4 8-4 14 0 20 4-6 4-12 0-20z" fill="#f4b942"/>
+  <path d="M20 26c6 2 10 6 12 12 2-6 6-10 12-12-4 10-8 16-12 22-4-6-8-12-12-22z" fill="#2a9d8f"/>
+  <path d="M16 48h32v6H16z" fill="#f8efe3"/>
+</svg>

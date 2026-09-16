@@ -1,0 +1,81 @@
+/* Design tokens — Rede Raízes do Nordeste
+   Paleta inspirada em terra, milho e mandacaru; contraste mínimo AA (4.5:1) nos textos. */
+:root {
+  --cor-primaria: #8b3a1e;        /* barro */
+  --cor-primaria-escura: #6a2b15;
+  --cor-primaria-clara: #fbe9e1;
+  --cor-secundaria: #f2b500;      /* milho */
+  --cor-secundaria-escura: #b58600;
+  --cor-terciaria: #2f6b3a;       /* mandacaru */
+  --cor-terciaria-clara: #e3f1e6;
+
+  --cor-fundo: #fbf7f1;
+  --cor-superficie: #ffffff;
+  --cor-superficie-2: #f4ede3;
+  --cor-borda: #dccfc0;
+  --cor-texto: #2b1d14;
+  --cor-texto-suave: #5f4d40;
+  --cor-texto-invertido: #ffffff;
+
+  --cor-sucesso: #1f7a3d;
+  --cor-sucesso-clara: #e1f4e7;
+  --cor-erro: #b3261e;
+  --cor-erro-clara: #fbe4e2;
+  --cor-alerta: #9a5b00;
+  --cor-alerta-clara: #fff2d6;
+  --cor-info: #1b5e8a;
+  --cor-info-clara: #e1eef7;
+
+  --fonte-base: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --fonte-titulo: Georgia, 'Times New Roman', serif;
+
+  --tam-xs: 0.75rem;
+  --tam-sm: 0.875rem;
+  --tam-md: 1rem;
+  --tam-lg: 1.125rem;
+  --tam-xl: 1.375rem;
+  --tam-2xl: 1.75rem;
+  --tam-3xl: 2.25rem;
+
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 0.75rem;
+  --esp-4: 1rem;
+  --esp-5: 1.5rem;
+  --esp-6: 2rem;
+  --esp-8: 3rem;
+
+  --raio-sm: 6px;
+  --raio-md: 12px;
+  --raio-lg: 20px;
+  --raio-pill: 999px;
+
+  --sombra-1: 0 1px 2px rgba(43, 29, 20, 0.08), 0 1px 6px rgba(43, 29, 20, 0.06);
+  --sombra-2: 0 4px 16px rgba(43, 29, 20, 0.12);
+
+  --alvo-toque: 44px;          /* WCAG 2.5.5 mínimo recomendado */
+  --largura-conteudo: 1120px;
+  --altura-header: 60px;
+  --transicao: 160ms ease;
+  --anel-foco: 0 0 0 3px var(--cor-fundo), 0 0 0 6px var(--cor-info);
+}
+
+/* TOTEM: alvos maiores, tipografia ampliada, menos densidade (Fase 8). */
+:root[data-canal='TOTEM'] {
+  --alvo-toque: 64px;
+  --tam-sm: 1rem;
+  --tam-md: 1.125rem;
+  --tam-lg: 1.375rem;
+  --tam-xl: 1.625rem;
+  --tam-2xl: 2rem;
+  --tam-3xl: 2.75rem;
+  --esp-4: 1.25rem;
+  --esp-5: 1.75rem;
+  --altura-header: 76px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transicao: 0ms;
+  }
+}
