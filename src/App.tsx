@@ -1,13 +1,13 @@
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { AppRoutes } from '@/routes/AppRoutes'
 import { AppProviders } from '@/store/AppProviders'
 
 export function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppProviders>
         <AppRoutes />
       </AppProviders>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
