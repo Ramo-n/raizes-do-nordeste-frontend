@@ -5,6 +5,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/raizes-do-nordeste-frontend/',
   plugins: [react()],
   resolve: {
     alias: {
