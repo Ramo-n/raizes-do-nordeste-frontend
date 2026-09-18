@@ -23,7 +23,7 @@ export function Header() {
     <header className="header">
       <div className="header__inner">
         <Link to={ROTAS.inicio} className="header__marca" aria-label="Raízes do Nordeste — página inicial">
-          <img src="/favicon.svg" alt="" width={32} height={32} />
+          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width={32} height={32} />
           <span>Raízes do Nordeste</span>
         </Link>
 
