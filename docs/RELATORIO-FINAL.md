@@ -7,7 +7,7 @@ Documento complementar à `docs/DOCUMENTACAO-ACADEMICA.md` (14 seções, casos d
 
 Foi entregue uma SPA React + TypeScript que cobre o fluxo completo do cliente (unidade → cardápio → produto → carrinho → login/cadastro com LGPD → checkout com fidelidade/promoção → pagamento MOCK com PENDING/APPROVED/DECLINED/ERROR e retry → confirmação → acompanhamento em preparo/pronto → retirada), além de painel operacional (atendente/cozinha/gerente), programa de fidelidade, promoções, área do cliente com direitos LGPD e três canais (WEB, APP, TOTEM) na mesma base de código. A camada de dados é intercambiável entre MOCK (`localStorage`) e a API real do Back-End Spring Boot já existente. Qualidade verificada: typecheck, lint, build, 34 testes automatizados e fluxo ponta a ponta em navegador (24 telas, 0 erros de console).
 
-**Ponto de partida.** Não existia repositório Front-End acessível ao assistente (o caminho local informado e o repositório GitHub não estavam disponíveis). O projeto foi criado do zero, alinhado ao Back-End `raizes-do-nordeste-backend` analisado na Fase 1 (`diagnostico-fase1.md`). Por decisão do autor, a entrega é local (ZIP), sem publicação no GitHub pelo assistente.
+**Ponto de partida.** Não existia repositório Front-End acessível ao assistente (o caminho local informado e o repositório GitHub não estavam disponíveis). O projeto foi criado do zero, alinhado ao Back-End `raizes-do-nordeste-backend` analisado na Fase 1 (`diagnostico-fase1.md`). O projeto foi versionado em repositório GitHub público e publicado no GitHub Pages.
 
 **Não é um sistema de produção.** Pagamento, cozinha e persistência são simulados; ver §22–§23 e §27.
 
@@ -22,7 +22,7 @@ Foi entregue uma SPA React + TypeScript que cobre o fluxo completo do cliente (u
 | Vitest + Testing Library + jsdom | 4.1 / 16 | testes de serviços, reducer e componentes |
 | ESLint 9 + typescript-eslint + react-hooks/refresh | 9 | padronização |
 | CSS puro com design tokens | — | sem dependência de UI kit; controle total de acessibilidade e canais |
-| Node | 20 LTS | — |
+| Node | 22.7.0 local / 22.12.0 CI | — |
 
 Sem bibliotecas de estado, formulário ou UI adicionais (RNF03; regra "não instalar dependências desnecessárias").
 
@@ -127,7 +127,6 @@ RF01–RF16 implementados e testados; RF17/RF18 atendidos conceitualmente confor
 
 ## 23. Requisitos pendentes
 
-- URL pública (Fase 25): não publicada pelo assistente por decisão do autor (entrega em ZIP, sem rastro no GitHub). Instruções em §26.
 - Testes E2E versionados no repositório (o script Playwright usado ficou fora do projeto para não adicionar dependência).
 
 ## 24. Como executar
@@ -153,10 +152,9 @@ SPA estática: publicar `dist/` em Vercel/Netlify/GitHub Pages. Configurar fallb
 
 ## 27. Pontos que ainda precisam ser feitos
 
-1. Criar o repositório Git e publicar a URL pública (autor).
 2. Executar o modo API contra o Back-End e ajustar eventuais divergências de payload.
 3. Telas de gestão (UC11–UC13) para gerente/matriz.
 4. Gateway de pagamento real (PIX) atrás de `PaymentGateway`; webhooks de status.
 5. Notificações (push/WebSocket) para "pedido pronto".
-6. Auditoria automatizada de acessibilidade e testes E2E versionados.
-7. Recuperação de senha, observações por item, agendamento com horários reais.
+5. Auditoria automatizada de acessibilidade e testes E2E versionados.
+6. Recuperação de senha, observações por item, agendamento com horários reais.
